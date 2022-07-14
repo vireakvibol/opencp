@@ -1,0 +1,41 @@
+<nz-layout>
+  <nz-sider
+    nzCollapsible
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null"
+    style="background-color: #fff"
+  >
+    <div class="logo"></div>
+    <ul nz-menu nzMode="inline">
+      <li nz-menu-item>
+        <i nz-icon nzType="dashboard" nzTheme="outline"></i>
+        <span>Dashboard</span>
+      </li>
+      <li nz-submenu nzTitle="Server manager" nzIcon="control">
+        <ul>
+          <li nz-menu-item>Tom</li>
+          <li nz-menu-item>Bill</li>
+          <li nz-menu-item>Alex</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <i
+        class="trigger"
+        nz-icon
+        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        (click)="isCollapsed = !isCollapsed"
+      ></i>
+    </nz-header>
+    <nz-content>
+      <nz-breadcrumb style="padding: 16px 0; background-color: #fff;">
+        <nz-breadcrumb-item>User</nz-breadcrumb-item>
+        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div class="inner-content">Bill is a cat.</div>
+    </nz-content>
+    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+  </nz-layout>
+</nz-layout>
